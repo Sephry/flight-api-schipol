@@ -1,46 +1,35 @@
 import React, { useState } from "react";
 
-function ArrivalDeparturesButton({ arrival, setArrival }) {
-  const [color, setColor] = useState("#141251");
+function ArrivalDeparturesButton({ setArrival }) {
+
+  const buttonActiveHandler = (isTrue) => {
+    setArrival(isTrue);
+  };
 
   return (
     <div className="flex flex-row justify-center gap-4 items-center p-4 w-4/5 ">
-      <div
+      <button
         className="flex w-40 h-8 rounded-2xl border-[#141251] font-semibold justify-center items-center"
-        style={
-          arrival
-            ? {
-                backgroundColor: color,
-                outline: "2px solid #141251",
-                color: "#fff",
-              }
-            : {
-                background: "none",
-                outline: "2px solid #141251",
-                color: "#141251",
-              }
-        }
+        style={{
+          background: "none",
+          outline: "2px solid #141251",
+          color: "#141251",
+        }}
+        onClick={() => buttonActiveHandler(true)}
       >
         Arrivals
-      </div>
-      <div
+      </button>
+      <button
         className="flex w-40 h-8 rounded-2xl border-[#141251] font-semibold justify-center items-center"
-        style={
-          arrival
-            ? {
-                backgroundColor: color,
-                outline: "2px solid #141251",
-                color: "#fff",
-              }
-            : {
-                background: "none",
-                outline: "2px solid #141251",
-                color: "#141251",
-              }
-        }
+        style={{
+          background: "none",
+          outline: "2px solid #141251",
+          color: "#141251",
+        }}
+        onClick={() => buttonActiveHandler(false)}
       >
         Departures
-      </div>
+      </button>
     </div>
   );
 }

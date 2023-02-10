@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import MainScreen from './component/MainScreen';
+import SelectBox from "./component/common/SelectBox";
+import SearchBox from "./component/common/SearchBox";
+import ArrivalDeparturesButton from "./component/common/ArrivalDeparturesButton";
 import axios from 'axios';
+import BoardList from './component/common/BoardList';
 
 
 function App() {
+
+  const [dataArrival, setDataArrival] = useState([]);
+  const [dataDeparture, setDataDeparture] = useState([]);
+  const [page, setPage] = useState(0);
+  const [arrival, setArrival] = useState(true);
+  const [filteredData, setFilteredData] = useState([]);
+
 
 
   const fetchFlights = async () => {
@@ -21,30 +31,65 @@ function App() {
           params: {
             //flightName: "PC1251",
             //airline: 'PC',
-            //flightDirection: 'A',
+            flightDirection: `${arrival ? "A" : "D"}`,
             //scheduledFrom: date,
             //scheduledTo: date,
             //sort: 'scheduleTime',
-            //order: 'ASC'
-            }
+            //order: 'ASC',
+            //page: 2
+          }
         }
       );
+
+      arrival
+        ? setDataArrival([...dataArrival, ...response.data?.flights])
+        : setDataDeparture([...dataDeparture, ...response.data?.flights]);
+
+
       console.log(response.data.flights);
     } catch (error) {
       console.error(error);
     }
   };
-fetchFlights()
+
+  useEffect(() => {
+    fetchFlights();
+
+  }, [arrival])
 
   return (
 
     <div className="App">
       <div className='h-screen w-screen items-center flex flex-col'>
+
         <header className='text-5xl text-center text m-10' >
           Flight App
         </header>
 
-        <MainScreen />
+        <div className="w-4/5 h-screen items-center justify-center  ">
+          <div className="flex flex-row items-center justify-center ">
+            <SelectBox />
+            <SearchBox
+              arrival={arrival}
+              setArrival={setArrival}
+              filteredData={filteredData}
+              setFilteredData={setFilteredData}
+              dataArrival={dataArrival}
+              dataDeparture={dataDeparture} />
+          </div>
+          <div className="flex flex-row items-center justify-center ">
+            <ArrivalDeparturesButton setArrival={setArrival} />
+          </div>
+        </div>
+
+
+        <div className='flex w-full justify-evenly'>
+          {arrival ? (
+            <BoardList arrival={arrival} data={dataArrival} filteredData={filteredData} />
+          ) : (
+            <BoardList arrival={arrival} data={dataArrival} filteredData={filteredData} />
+          )}
+        </div>
 
       </div>
 
