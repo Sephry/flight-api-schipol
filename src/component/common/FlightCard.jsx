@@ -3,8 +3,6 @@ import React from "react";
 function FlightCard({ flight, arrival }) {
   const {
     id,
-    actualLandingTime,
-    estimatedLandingTime,
     flightName,
 
     airlineCode,
@@ -14,21 +12,51 @@ function FlightCard({ flight, arrival }) {
 
     baggageClaim,
 
-    expectedTimeBoarding,
-    actualOffBlockTime,
     publicFlightState,
     gate,
     aircraftType: { iataMain },
   } = flight;
 
+  let flightStatus = "";
+
+  switch (publicFlightState?.flightStates[0]) {
+    case "SCH":
+      flightStatus = "On Time";
+      break;
+    case "AIR":
+      flightStatus = "On Air";
+      break;
+    case "EXP":
+      flightStatus = "Landing";
+      break;
+    case "ARR":
+      flightStatus = "Completed";
+      break;
+    case "DEL":
+      flightStatus = "Delayed";
+      break;
+    case "CNX":
+      flightStatus = "Canceled";
+      break;
+    case "TOM":
+      flightStatus = "Tomorrow";
+      break;
+    case "FIR":
+      flightStatus = "Approaching";
+      break;
+    default:
+      flightStatus = "No Info Yet";
+      break;
+  }
+
   return (
     <div
       key={id}
-      className="flex items-center justify-around bg-[#141251] mb-2 relative z-0 flex-wrap w-40 p-8 gap-4 rounded-2xl"
+      className="flex w-full items-center justify-around bg-[#141251] mb-2 relative z-0 flex-wrap p-8 gap-4 rounded-2xl"
     >
       <div className="flex flex-col items-center justify-center p-4">
         <p className="text-white">Flight Status</p>
-        <h2 className="text-white">{}</h2>
+        <h2 className="text-white">{flightStatus}</h2>
       </div>
 
       <div className="flex flex-col items-center justify-center p-4">

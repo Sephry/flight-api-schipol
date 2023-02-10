@@ -1,0 +1,304 @@
+{
+    "aircraftTypes": [
+      {
+        "iataMain": "100",
+        "iataSub": "100",
+        "longDescription": "FOKKER 100",
+        "shortDescription": "FK100"
+      },
+      {
+        "iataMain": "146",
+        "iataSub": "142",
+        "longDescription": "BRITISH AEROSPACE 146-200 PASSENGER",
+        "shortDescription": "BAE 146-200P"
+      },
+      {
+        "iataMain": "146",
+        "iataSub": "143",
+        "longDescription": "BRITISH AEROSPACE 146-300",
+        "shortDescription": "BAE 146-300"
+      },
+      {
+        "iataMain": "146",
+        "iataSub": "141",
+        "longDescription": "BRITISH AEROSPACE 146-100",
+        "shortDescription": "BAE 146-100"
+      },
+      {
+        "iataMain": "14F",
+        "iataSub": "14Y",
+        "longDescription": "BRITISH AEROSPACE 146-200 FREIGHTER",
+        "shortDescription": "BAE 146-200F"
+      },
+      {
+        "iataMain": "220",
+        "iataSub": "223",
+        "longDescription": "Airbus A220-300",
+        "shortDescription": "Airbus A220-3"
+      },
+      {
+        "iataMain": "220",
+        "iataSub": "221",
+        "longDescription": "Airbus A220-100",
+        "shortDescription": "Airbus A220-1"
+      },
+      {
+        "iataMain": "310",
+        "iataSub": "313",
+        "longDescription": "AIRBUS A310-300 PASSENGER",
+        "shortDescription": "A310-300"
+      },
+      {
+        "iataMain": "31F",
+        "iataSub": "31Y",
+        "longDescription": "AIRBUS A310-300 FREIGHTER",
+        "shortDescription": "A310-300F"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "32N",
+        "longDescription": "AIRBUS A320 NEO",
+        "shortDescription": "AIRBUS A320 NEO"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "319",
+        "longDescription": "AIRBUS A319-111",
+        "shortDescription": "AIRBUS A319-1"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "32A",
+        "longDescription": "AIRBUS A320-214 SHARKLETS",
+        "shortDescription": "A320-214 SHARK"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "318",
+        "longDescription": "AIRBUS A318",
+        "shortDescription": "AIRBUS A318"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "321",
+        "longDescription": "AIRBUS A321-100/200",
+        "shortDescription": "AIRBUS A321"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "320",
+        "longDescription": "AIRBUS A320 Passenger",
+        "shortDescription": "A320"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "32Q",
+        "longDescription": "AIRBUS A321 NEO",
+        "shortDescription": "AIRBUS A321 NEO"
+      },
+      {
+        "iataMain": "32S",
+        "iataSub": "31N",
+        "longDescription": "AIRBUS A319 NEO",
+        "shortDescription": "AIRBUS A319 NEO"
+      },
+      {
+        "iataMain": "330",
+        "iataSub": "339",
+        "longDescription": "AIRUBUS A330-900neo",
+        "shortDescription": "AIRBUS A330-900"
+      },
+      {
+        "iataMain": "330",
+        "iataSub": "332",
+        "longDescription": "AIRBUS A330-200",
+        "shortDescription": "AIRBUS A330-200"
+      },
+      {
+        "iataMain": "330",
+        "iataSub": "333",
+        "longDescription": "AIRBUS A330-300",
+        "shortDescription": "AIRBUS A330-300"
+      },
+      {
+        "iataMain": "330",
+        "iataSub": "338",
+        "longDescription": "Airbus A330-800NEO",
+        "shortDescription": "Airbus A330-800"
+      },
+      {
+        "iataMain": "33F",
+        "iataSub": "33X",
+        "longDescription": "A330-200 FREIGHTER",
+        "shortDescription": "A330-200F"
+      },
+      {
+        "iataMain": "33F",
+        "iataSub": "33Y",
+        "longDescription": "Airbus A330-300F",
+        "shortDescription": "A330-300F"
+      },
+      {
+        "iataMain": "340",
+        "iataSub": "345",
+        "longDescription": "AIRBUS A340-500",
+        "shortDescription": "AIRBUS A340-500"
+      },
+      {
+        "iataMain": "340",
+        "iataSub": "346",
+        "longDescription": "AIRBUS A340-600",
+        "shortDescription": "AIRBUS A340-600"
+      },
+      {
+        "iataMain": "340",
+        "iataSub": "343",
+        "longDescription": "AIRBUS A340-311",
+        "shortDescription": "AIRBUS A340-311"
+      },
+      {
+        "iataMain": "343",
+        "iataSub": "343",
+        "longDescription": "AIRBUS A340-313",
+        "shortDescription": "AIRBUS A340-313"
+      },
+      {
+        "iataMain": "350",
+        "iataSub": "351",
+        "longDescription": "AIRBUS A350-1000",
+        "shortDescription": "AIRBUS 350-1000"
+      },
+      {
+        "iataMain": "350",
+        "iataSub": "359",
+        "longDescription": "AIRBUS A350-900",
+        "shortDescription": "AIRBUS A350-900"
+      },
+      {
+        "iataMain": "380",
+        "iataSub": "388",
+        "longDescription": "Airbus A380-800",
+        "shortDescription": "AIRBUS A380"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "73W",
+        "longDescription": "BOEING 737-700 Winglets",
+        "shortDescription": "B737-700 WING"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "738",
+        "longDescription": "BOEING 737-800 PASSENGER",
+        "shortDescription": "B737-800"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "73C",
+        "longDescription": "Boeing 737-300 Winglets",
+        "shortDescription": "B737-300 WL"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "73G",
+        "longDescription": "BOEING 737-700",
+        "shortDescription": "B737-700"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "7M8",
+        "longDescription": "Boeing 737MAX-8",
+        "shortDescription": "B737MAX-8"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "734",
+        "longDescription": "BOEING 737-400",
+        "shortDescription": "B737-400"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "735",
+        "longDescription": "BOEING 737-500",
+        "shortDescription": "B737-500"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "7M9",
+        "longDescription": "Boeing 737MAX-9",
+        "shortDescription": "B737MAX-9"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "73E",
+        "longDescription": "Boeing 737-500 Winglets",
+        "shortDescription": "B737-500 WL"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "73J",
+        "longDescription": "B737-900/Winglets",
+        "shortDescription": "B737-900/W"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "733",
+        "longDescription": "BOEING 737-300",
+        "shortDescription": "B737-300"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "73H",
+        "longDescription": "BOEING 737-800 WINGLETS",
+        "shortDescription": "B737-800 WING"
+      },
+      {
+        "iataMain": "737",
+        "iataSub": "736",
+        "longDescription": "BOEING 737-600",
+        "shortDescription": "B737-600"
+      },
+      {
+        "iataMain": "73F",
+        "iataSub": "73S",
+        "longDescription": "Boeing 737-700 Freighter (Winglets)",
+        "shortDescription": "B737-700F WING"
+      },
+      {
+        "iataMain": "73F",
+        "iataSub": "73K",
+        "longDescription": "Boeing 737-800 Freighter (Winglets)",
+        "shortDescription": "B737-800F WING"
+      },
+      {
+        "iataMain": "73F",
+        "iataSub": "73P",
+        "longDescription": "BOEING 737-400 FREIGHTER",
+        "shortDescription": "B737-400F"
+      },
+      {
+        "iataMain": "73F",
+        "iataSub": "73Y",
+        "longDescription": "BOEING 737- 300 FREIGHTER",
+        "shortDescription": "B737-300F"
+      },
+      {
+        "iataMain": "747",
+        "iataSub": "74H",
+        "longDescription": "Boeing 747-8",
+        "shortDescription": "B747-8"
+      },
+      {
+        "iataMain": "747",
+        "iataSub": "744",
+        "longDescription": "BOEING 747-400 PASSENGER",
+        "shortDescription": "B747-400P"
+      },
+      {
+        "iataMain": "74F",
+        "iataSub": "74X",
+        "longDescription": "BOEING 747-200C/200F FREIGHTER",
+        "shortDescription": "B747-200F"
+      }
+    ]
+  }

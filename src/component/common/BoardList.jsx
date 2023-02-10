@@ -3,7 +3,7 @@ import FlightCard from "./FlightCard";
 
 function BoardList({ data, arrival, filteredData }) {
   return (
-    <div className="flex flex-wrap justify-evenly items-center pt-8 gap-8">
+    <div className="flex flex-col w-full flex-wrap justify-evenly items-center pt-8 gap-8">
       {filteredData?.length
         ? filteredData.map((flight, id) => {
             return (

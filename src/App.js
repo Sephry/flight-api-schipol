@@ -11,17 +11,33 @@ function App() {
 
   const [dataArrival, setDataArrival] = useState([]);
   const [dataDeparture, setDataDeparture] = useState([]);
-  const [page, setPage] = useState(0);
   const [arrival, setArrival] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
 
-//arrivals geliş 
-//deparatures gidiş
+
+  const addDays = (date, days) => {
+    const copy = new Date(Number(date));
+    copy.setDate(date.getDate() + days);
+    return copy;
+  };
+
+  let date = new Date();
+  date.setHours(date.getHours() + 2);
+  date.setMinutes(date.getMinutes() + 60);
+
+  let dateData = new Date();
+  const dateNow = date;
+  const dateTomorrow = addDays(dateData, 1);
+
+  const jsonDateNow = dateNow.toJSON().split(".")[0];
+  const jsonDateTomorrow = dateTomorrow.toJSON().split(".")[0];
+
 
   const fetchFlights = async () => {
     try {
       const response = await axios.get(
-        `https://cors-anywhere.herokuapp.com/https://api.schiphol.nl/public-flights/flights`,
+        `/flights?flightDirection=${arrival ? "A" : "D"
+        }&fromDateTime=${jsonDateNow}&toDateTime=${jsonDateTomorrow}&searchDateTimeField=scheduleDateTime&page=0&sort=+scheduleDate, +scheduleTime`,
         {
           headers: {
             'Accept': 'application/json',
@@ -32,7 +48,7 @@ function App() {
           params: {
             //flightName: "PC1251",
             //airline: 'PC',
-            flightDirection: `${arrival ? "A" : "D"}`,
+            //flightDirection: `${arrival ? "A" : "D"}`,
             //scheduledFrom: date,
             //scheduledTo: date,
             //sort: 'scheduleTime',
@@ -54,7 +70,7 @@ function App() {
   };
 
   useEffect(() => {
-    //fetchFlights();
+    fetchFlights();
 
   }, [arrival])
 
@@ -69,11 +85,13 @@ function App() {
 
         <div className="w-4/5 h-screen items-center justify-center  ">
           <div className="flex flex-row items-center justify-center ">
-            <SelectBox />
+            <SelectBox
+              arrival={arrival}
+              setFilteredData={setFilteredData}
+              dataArrival={dataArrival}
+              dataDeparture={dataDeparture} />
             <SearchBox
               arrival={arrival}
-              setArrival={setArrival}
-              filteredData={filteredData}
               setFilteredData={setFilteredData}
               dataArrival={dataArrival}
               dataDeparture={dataDeparture} />
@@ -84,7 +102,7 @@ function App() {
         </div>
 
 
-        <div className='flex w-full justify-evenly flex-row'>
+        <div className='flex w-full justify-evenly flex-col'>
           {arrival ? (
             <BoardList arrival={arrival} data={dataArrival} filteredData={filteredData} />
           ) : (

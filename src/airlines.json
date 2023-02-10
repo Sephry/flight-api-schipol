@@ -1,0 +1,124 @@
+{
+    "airlines": [
+      {
+        "iata": null,
+        "icao": null,
+        "nvls": 5196,
+        "publicName": "AEG"
+      },
+      {
+        "iata": null,
+        "icao": "VBB",
+        "nvls": 5257,
+        "publicName": "ALK"
+      },
+      {
+        "iata": "5O",
+        "icao": "FPO",
+        "nvls": 5082,
+        "publicName": "ASL Airlines France"
+      },
+      {
+        "iata": null,
+        "icao": null,
+        "nvls": 5301,
+        "publicName": "ASM"
+      },
+      {
+        "iata": "F5",
+        "icao": "ATG",
+        "nvls": 5194,
+        "publicName": "ATC"
+      },
+      {
+        "iata": null,
+        "icao": "VBA",
+        "nvls": 5158,
+        "publicName": "AVB 2012"
+      },
+      {
+        "iata": null,
+        "icao": null,
+        "nvls": 5208,
+        "publicName": "Acces Flight Support"
+      },
+      {
+        "iata": "JP",
+        "icao": "ADR",
+        "nvls": 6,
+        "publicName": "Adria Airways"
+      },
+      {
+        "iata": "A3",
+        "icao": "AEE",
+        "nvls": 386,
+        "publicName": "Aegean Airlines"
+      },
+      {
+        "iata": "EI",
+        "icao": "EIN",
+        "nvls": 108,
+        "publicName": "Aer Lingus"
+      },
+      {
+        "iata": null,
+        "icao": null,
+        "nvls": 5086,
+        "publicName": "AerCap Ireland Ltd."
+      },
+      {
+        "iata": "SU",
+        "icao": "AFL",
+        "nvls": 7,
+        "publicName": "Aeroflot"
+      },
+      {
+        "iata": "XZ",
+        "icao": "AEZ",
+        "nvls": 5293,
+        "publicName": "Aeroitalia"
+      },
+      {
+        "iata": "AM",
+        "icao": "AMX",
+        "nvls": 794,
+        "publicName": "Aeromexico"
+      },
+      {
+        "iata": null,
+        "icao": "IAM",
+        "nvls": 5140,
+        "publicName": "Aeronautica Militare Italiana"
+      },
+      {
+        "iata": null,
+        "icao": "DFC",
+        "nvls": 5125,
+        "publicName": "Aeropartner"
+      },
+      {
+        "iata": null,
+        "icao": "MCK",
+        "nvls": 5248,
+        "publicName": "Aeroways"
+      },
+      {
+        "iata": null,
+        "icao": "AWH",
+        "nvls": 5298,
+        "publicName": "Aerowest"
+      },
+      {
+        "iata": "6I",
+        "icao": null,
+        "nvls": 5251,
+        "publicName": "Air Alisie A/S"
+      },
+      {
+        "iata": "WP",
+        "icao": null,
+        "nvls": 5181,
+        "publicName": "Air Antwerp BV"
+      }
+    ]
+  }

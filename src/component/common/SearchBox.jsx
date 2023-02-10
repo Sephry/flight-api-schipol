@@ -1,16 +1,7 @@
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
 
-
-function SearchBox({
-  dataArrival,
-  dataDeparture,
-  filteredData,
-  setFilteredData,
-  arrival,
-  seArrival,
-}) {
-  
+function SearchBox({ dataArrival, dataDeparture, setFilteredData, arrival }) {
   const [inputValue, setInputValue] = useState("");
 
   const searchFilterHandler = (e) => {
@@ -22,12 +13,14 @@ function SearchBox({
         !arrival
           ? dataDeparture.filter((departure) => {
               return (
-                departure?.flightName.toLowerCase() === inputValue.toLowerCase()
+                departure?.aircraftType.iataMain?.toLowerCase() ===
+                inputValue.toLowerCase()
               );
             })
           : dataArrival.filter((arrival) => {
               return (
-                arrival?.flightName.toLowerCase() === inputValue.toLowerCase()
+                arrival?.aircraftType.iataMain?.toLowerCase() ===
+                inputValue.toLowerCase()
               );
             })
       );
@@ -37,14 +30,14 @@ function SearchBox({
   return (
     <div className="relative flex flex-col justify-center items-center gap-4">
       <form onSubmit={searchFilterHandler}>
-      <TextField
-        sx={{ m: 5, width: 300, mt: 3 }}
-        id="outlined-basic"
-        variant="outlined"
-        label="Search"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
+        <TextField
+          sx={{ m: 5, width: 300, mt: 3 }}
+          id="outlined-basic"
+          variant="outlined"
+          label="Search"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
       </form>
     </div>
   );
