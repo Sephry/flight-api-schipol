@@ -41,10 +41,10 @@ function App() {
         }
       );
 
-      arrival
-        ? setDataArrival([...dataArrival, ...response.data?.flights])
-        : setDataDeparture([...dataDeparture, ...response.data?.flights]);
-
+       arrival
+         ? setDataArrival([...dataArrival, ...response.data?.flights])
+         : setDataDeparture([...dataDeparture, ...response.data?.flights]);
+      
 
       console.log(response.data.flights);
     } catch (error) {
@@ -53,8 +53,8 @@ function App() {
   };
 
   useEffect(() => {
-    fetchFlights();
-
+    //fetchFlights();
+    
   }, [arrival])
 
   return (
@@ -78,7 +78,7 @@ function App() {
               dataDeparture={dataDeparture} />
           </div>
           <div className="flex flex-row items-center justify-center ">
-            <ArrivalDeparturesButton setArrival={setArrival} />
+            <ArrivalDeparturesButton setArrival={setArrival} arrival={arrival} />
           </div>
         </div>
 
@@ -87,7 +87,7 @@ function App() {
           {arrival ? (
             <BoardList arrival={arrival} data={dataArrival} filteredData={filteredData} />
           ) : (
-            <BoardList arrival={arrival} data={dataArrival} filteredData={filteredData} />
+            <BoardList arrival={arrival} data={dataDeparture} filteredData={filteredData} />
           )}
         </div>
 

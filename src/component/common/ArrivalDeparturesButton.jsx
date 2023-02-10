@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ArrivalDeparturesButton({ setArrival }) {
+function ArrivalDeparturesButton({ setArrival, arrival }) {
 
   const buttonActiveHandler = (isTrue) => {
     setArrival(isTrue);
