@@ -15,7 +15,8 @@ function App() {
   const [arrival, setArrival] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
 
-
+//arrivals geliş 
+//deparatures gidiş
 
   const fetchFlights = async () => {
     try {
@@ -41,10 +42,10 @@ function App() {
         }
       );
 
-       arrival
-         ? setDataArrival([...dataArrival, ...response.data?.flights])
-         : setDataDeparture([...dataDeparture, ...response.data?.flights]);
-      
+      arrival
+        ? setDataArrival([...dataArrival, ...response.data?.flights])
+        : setDataDeparture([...dataDeparture, ...response.data?.flights]);
+
 
       console.log(response.data.flights);
     } catch (error) {
@@ -54,7 +55,7 @@ function App() {
 
   useEffect(() => {
     //fetchFlights();
-    
+
   }, [arrival])
 
   return (
@@ -83,7 +84,7 @@ function App() {
         </div>
 
 
-        <div className='flex w-full justify-evenly'>
+        <div className='flex w-full justify-evenly flex-row'>
           {arrival ? (
             <BoardList arrival={arrival} data={dataArrival} filteredData={filteredData} />
           ) : (

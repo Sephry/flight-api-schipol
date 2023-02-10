@@ -10,6 +10,7 @@ function SearchBox({
   arrival,
   seArrival,
 }) {
+  
   const [inputValue, setInputValue] = useState("");
 
   const searchFilterHandler = (e) => {
