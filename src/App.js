@@ -37,7 +37,7 @@ function App() {
     try {
       const response = await axios.get(
         `/flights?flightDirection=${arrival ? "A" : "D"
-        }&fromDateTime=${jsonDateNow}&toDateTime=${jsonDateTomorrow}&searchDateTimeField=scheduleDateTime&page=0&sort=+scheduleDate`,
+        }&fromDateTime=${jsonDateNow}&toDateTime=${jsonDateTomorrow}&searchDateTimeField=scheduleDateTime&page=0&sort=+scheduleDate, +scheduleTime`,
         {
           headers: {
             'Accept': 'application/json',
