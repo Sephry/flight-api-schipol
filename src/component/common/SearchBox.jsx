@@ -34,7 +34,7 @@ function SearchBox({ dataArrival, dataDeparture, setFilteredData, arrival }) {
           sx={{ m: 5, width: 300, mt: 3 }}
           id="outlined-basic"
           variant="outlined"
-          label="Search"
+          label="Aircraft Type"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
