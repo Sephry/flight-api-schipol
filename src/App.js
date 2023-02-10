@@ -41,8 +41,8 @@ function App() {
         {
           headers: {
             'Accept': 'application/json',
-            'app_id': "234213b6",
-            'app_key': "141d3c9064ca6a05839a332c83eb3264",
+            'app_id': process.env.REACT_APP_API_ID,
+            'app_key': process.env.REACT_APP_API_KEY,
             'ResourceVersion': 'v4'
           },
           params: {
